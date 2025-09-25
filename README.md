@@ -1,16 +1,54 @@
-# React + Vite
+# Mini E-commerce (Mini Catalog)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small frontend-only e-commerce demo built with React + Vite. It includes a product catalog, search & filter, product details modal, and a cart. The project uses simple CSS in `src/App.css` and small React components under `src/components`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Product listing (image, name, price, stock)
+- Search by name and category filter
+- Product details modal with quantity selection
+- Cart page: add/remove items, update quantities, and show total price
+- Routes: Home (`/`), Cart (`/cart`), About (`/about`), Contact (`/contact`)
 
-## React Compiler
+## Files to know
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/App.jsx` — app entry and routing
+- `src/index.css` & `src/App.css` — styles
+- `src/data/products.js` — product seed data and image URLs
+- `src/components/` — UI components (Navbar, Header, ProductList, ProductCard, ProductDetails, Cart, Footer)
+- `src/pages/` — `CartPage.jsx`, `About.jsx`, `Contact.jsx`
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/USERNAME/mini_ecommerce.git
+
+2. Navigate to the project folder:
+
+cd mini_ecommerce
+3.Install dependencies:
+
+npm install
+# or
+yarn
+
+
+4.Start the development server:
+
+npm run dev
+# or
+yarn dev
+
+
+
+
+
+## Troubleshooting
+
+- "Images not showing": try opening the image URL directly in a browser. If external images are blocked, switch to local images in `src/assets/`.
+- "Port in use": Vite will try a different port or stop the process using that port and restart.
+- If you see PostCSS/Tailwind build errors, check `postcss.config.js` or remove Tailwind directives if you prefer plain CSS.
+
